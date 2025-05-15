@@ -1,7 +1,7 @@
 {
-	"name": "open-source-stack",
+	"name": "with-react",
 	"version": "1.0.0",
-	"description": "Minimal open-source stack to help you ship an open-source package in TS",
+	"description": "Composable component versions of React hooks",
 	"scripts": {
 		"build": "pnpm run --filter=\"./packages/**/*\" build",
 		"build:watch": "pnpm build && pnpm run --filter=\"./packages/**/*\" --parallel build --watch",
@@ -11,32 +11,51 @@
 		"test": "pnpm run --filter=\"./packages/**/*\" --parallel test",
 		"test:cov": "pnpm run --filter=\"./packages/**/*\" --parallel test:cov",
 		"dev": "pnpm build && pnpm run --parallel dev",
-		"check": "biome check .",
-		"check:fix": "biome check --fix .",
 		"changeset": "changeset",
 		"release": "changeset publish",
 		"local-release": "changeset version && changeset publish",
 		"version": "changeset version"
 	},
-	"author": "forge-42",
+	"author": "jacobparis",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/forge-42/open-source-stack.git"
+		"url": "https://github.com/jacobparis/with-react.git"
 	},
 	"bugs": {
-		"url": "https://github.com/forge-42/open-source-stack/issues"
+		"url": "https://github.com/jacobparis/with-react/issues"
 	},
-	"homepage": "https://github.com/forge-42/open-source-stack#readme",
+	"homepage": "https://github.com/jacobparis/with-react#readme",
+	"peerDependencies": {
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
 		"@changesets/cli": "^2.29.0",
+		"@testing-library/dom": "^10.4.0",
+		"@testing-library/jest-dom": "^6.6.3",
+		"@testing-library/react": "^16.3.0",
+		"@testing-library/user-event": "^14.6.1",
 		"@types/node": "^20.17.30",
-		"lefthook": "^1.11.10"
+		"@types/react": "^19.1.4",
+		"@types/react-dom": "^19.1.5",
+		"@vitest/ui": "^3.1.3",
+		"jsdom": "^26.1.0",
+		"lefthook": "^1.11.10",
+		"prettier": "^3.5.3",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"vitest": "^3.1.3"
 	},
-	"packageManager": "pnpm@10.6.5",
+	"packageManager": "pnpm@10.11.0",
 	"engines": {
 		"pnpm": ">=10.6.5",
 		"node": ">=20.0.0"
+	},
+	"prettier": {
+		"trailingComma": "all",
+		"printWidth": 120,
+		"semi": false,
+		"useTabs": true
 	}
 }

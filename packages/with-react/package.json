@@ -1,5 +1,5 @@
 {
-	"name": "open-source-stack",
+	"name": "with-react",
 	"version": "1.1.2",
 	"description": "Minimal open-source stack to help you ship an open-source package in TS",
 	"main": "./dist/index.cjs",
@@ -22,7 +22,7 @@
 		}
 	},
 	"scripts": {
-		"test": "vitest run",
+		"test": "vitest",
 		"test:cov": "vitest run --coverage",
 		"postbuild": "pnpm run check:exports",
 		"build": "tsdown src/index.ts --config tsdown.config.ts --clean",
@@ -30,30 +30,38 @@
 		"prepublishOnly": "pnpm run build",
 		"typecheck": "tsc",
 		"validate": "pnpm run check && pnpm run typecheck && pnpm run test",
-		"check:exports": "attw --pack ."
+		"check:exports": "attw --pack .",
+		"test:ui": "vitest --ui"
 	},
 	"author": "",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/forge-42/open-source-stack.git"
+		"url": "git+https://github.com/jacobparis/with-react.git"
 	},
 	"bugs": {
-		"url": "https://github.com/forge-42/open-source-stack/issues"
+		"url": "https://github.com/jacobparis/with-react/issues"
 	},
-	"files": ["dist"],
-	"homepage": "https://github.com/forge-42/open-source-stack#readme",
+	"files": [
+		"dist"
+	],
+	"homepage": "https://github.com/jacobparis/with-react#readme",
 	"publishConfig": {
 		"provenance": true
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.17.4",
 		"@changesets/cli": "^2.29.0",
+		"@testing-library/user-event": "^14.6.1",
 		"@types/node": "^20.17.30",
+		"@types/react": "^19.1.4",
 		"@vitest/coverage-v8": "^3.1.1",
 		"happy-dom": "^17.4.4",
 		"tsdown": "^0.9.1",
 		"typescript": "^5.8.3",
 		"vitest": "^3.1.1"
+	},
+	"peerDependencies": {
+		"react": "^19.0.0"
 	}
 }

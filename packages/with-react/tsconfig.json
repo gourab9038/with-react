@@ -10,7 +10,8 @@
 		"types": ["vitest/globals"],
 		"rootDir": ".",
 		"outDir": "./dist",
-		"noEmit": true
+		"noEmit": true,
+		"jsx": "react"
 	},
 	"include": ["src/**/*", "tests/**/*"],
 	"exclude": ["node_modules", "dist"]
