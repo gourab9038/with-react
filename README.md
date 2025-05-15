@@ -19,8 +19,13 @@ function UserProfile({ user, showDetails }) {
     <div>
       <h1>{user.name}</h1>
 
-			<p> This is a really long description and there could be more markup or other components between here and the top of the component. Since hooks need to be declared at the top of the component function, instead of in the JSX, you may want to use WithState instead of useState just for colocation reasons.
-		  </p>
+      <p>
+        This is a really long description and there could be more markup
+        or other components between here and the top of the component.
+        Since hooks need to be declared at the top of the component function,
+        instead of in the JSX, you may want to use WithState instead of useState
+        just for colocation reasons.
+      </p>
 
       {showDetails && (
         <WithState initialState={user.lastLogin}>
@@ -103,16 +108,16 @@ function UserDetails() {
   return (
     <div>
       <h1>User Details</h1>
-			<Suspense fallback={<Spinner />}>
-				<WithUse value={getUserPromise}>
-					{(user) => (
-						<div>
-							<p>Name: {user.name}</p>
-							<p>Email: {user.email}</p>
-						</div>
-					)}
-				</WithUse>
-			</Suspense>
+      <Suspense fallback={<Spinner />}>
+        <WithUse value={getUserPromise}>
+          {(user) => (
+            <div>
+              <p>Name: {user.name}</p>
+              <p>Email: {user.email}</p>
+            </div>
+          )}
+        </WithUse>
+      </Suspense>
     </div>
   )
 }
